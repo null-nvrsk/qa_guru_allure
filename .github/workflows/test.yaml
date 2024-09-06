@@ -6,9 +6,6 @@ jobs:
   test:
     # где запускаем
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
 
     # что делаем
     steps:
