@@ -44,6 +44,8 @@ jobs:
       # публикуем отчет
       - uses: peaceiris/actions-gh-pages@v2
         if: always()
+        permissions:
+          contents: write
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
