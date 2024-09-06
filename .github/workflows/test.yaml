@@ -6,6 +6,9 @@ jobs:
   test:
     # где запускаем
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
 
     # что делаем
     steps:
@@ -44,8 +47,6 @@ jobs:
       # публикуем отчет
       - uses: peaceiris/actions-gh-pages@v2
         if: always()
-        permissions:
-          contents: write
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
